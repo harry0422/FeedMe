@@ -1,8 +1,5 @@
 ﻿using FeedMe.WebClient.DTOs;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace FeedMe.WebClient
 {
@@ -10,7 +7,7 @@ namespace FeedMe.WebClient
     {
         public UserDto GetUserByUserName(string userName)
         {
-
+            throw new NotImplementedException();
         }
     }
 }
