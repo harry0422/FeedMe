@@ -79,7 +79,7 @@ export class Profile extends Component {
                                 <div className="row">
                                     <div className="col mb-2">
                                         <div className="px-1 py-1">
-                                            <div className="p-4 rounded shadow-sm bg-light"><p className="font-italic mb-0">Tercer feed</p></div>
+                                            <div className="p-4 rounded shadow-sm bg-light"><p className="font-italic mb-0">Feed Pipeline</p></div>
                                         </div>
                                     </div>
                                 </div>
