@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FeedMe.WebClient;
+using FeedMe.WebClient.DTOs;
+using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Threading.Tasks;
 
 namespace FeedMe.Controllers
 {
@@ -7,12 +10,19 @@ namespace FeedMe.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
+        private readonly UserService _userService;
+
+        public UsersController()
+        {
+            _userService = new UserService();
+        }
 
         // GET api/<UsersController>/5
         [HttpGet("{userName}")]
-        public ActionResult GetUser(string userName)
+        public async Task<ActionResult> GetUser(string userName)
         {
-            throw new NotImplementedException();
+            UserDto user = await _userService.GetUserByUserName(userName);
+            return Ok(user);
         }
 
         // GET api/<UsersController>/5
